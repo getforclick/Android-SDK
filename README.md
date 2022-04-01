@@ -3,7 +3,7 @@
 
 ## Установка  
 
-Установка происходит через maven репозиторий  или скачав get4clickSdk.aar 
+Установка происходит через maven репозиторий  
 
 Сначала включите JitPack в  repositories list,
 
@@ -34,8 +34,8 @@ dependencies {
 
 ```kotlin
     Get4ClickSDK.getCurrentOrder().
-					setCustomerFirstName('name').
-					setCustomerLastName('lastname')...
+					setCustomerFirstName("name").
+					setCustomerLastName("lastname")...
 
  ```
 
@@ -68,8 +68,8 @@ dependencies {
     Get4ClickSDK.addOrder("NewOne")
 	
 	 Get4ClickSDK.getOrder("NewOne").
-					setCustomerFirstName('name').
-					setCustomerLastName('lastname')...
+					setCustomerFirstName("name").
+					setCustomerLastName("lastname")...
 
  ```
  
