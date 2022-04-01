@@ -25,12 +25,13 @@ import ru.get4click.sdk.models.Banner
         return false
     }
 
-     fun showBanner(banner: Banner?, scale: Double) {
+     fun showBanner(banner: Banner?, scale: Double=1.0) {
         val string = banner?.getScript(scale) ?: ""
         loadData(string, "text/html", "UTF-8")
     }
 
-    private fun showDebugBanner(banner: Banner?, scale: Double=1.0){
+  
+     private fun showDebugBanner(banner: Banner?, scale: Double=1.0){
         val string = banner?.getDebugScript(scale) ?: ""
         loadData(string, "text/html", "UTF-8")
     }

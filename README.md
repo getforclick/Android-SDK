@@ -1,5 +1,5 @@
 # GET4Click SDK Android
-Это SDK для GET4Click , язык Kotlin (Android ) , Swift(IOS) в будущем релизе возможен переход на Kotlin Multiplatform
+Это SDK для Get4Click , язык Kotlin (Android )  в будущем релизе возможен переход на Kotlin Multiplatform
 
 ## Установка  
 
@@ -13,7 +13,7 @@ repositories {
 }
 ```
 
-Чтобы импортировать GET4Click sdk импортируйте зависимость,
+Чтобы импортировать Get4ClickSDK sdk импортируйте зависимость,
 
 ```groovy
 dependencies {
@@ -26,14 +26,14 @@ dependencies {
 В начале (перед созданием  заказа )инициализируйте SDK , методом initSDK(shopId : Int) задав ваш shopId 
 
 ```kotlin
-   GET4ClickSDK.initSDK(863)
+   Get4ClickSDK.initSDK(863)
 ```
 
 
 Чтобы собрать параметры для заказа воспользуйтесь паттерном builder для обьекта order 
 
 ```kotlin
-    GET4ClickSDK.getCurrentOrder().
+    Get4ClickSDK.getCurrentOrder().
 					setCustomerFirstName('name').
 					setCustomerLastName('lastname')...
 
@@ -65,9 +65,9 @@ dependencies {
 
 
 ```kotlin
-    GET4ClickSDK.addOrder("NewOne")
+    Get4ClickSDK.addOrder("NewOne")
 	
-	 GET4ClickSDK.getOrder("NewOne").
+	 Get4ClickSDK.getOrder("NewOne").
 					setCustomerFirstName('name').
 					setCustomerLastName('lastname')...
 
@@ -94,27 +94,42 @@ val banner = Banner(bannerId, order)
 Вызовите метод showBanner(banner) у BannerView когда будете готовы 
 
 ```kotlin
-BannerView.showBanner(banner)
+BannerView.showBanner(banner, 1.0)
  ```
 
 
 У метода showBanner() есть не обязательный параметр scale : Double - можно уменьшить или увеличить баннер (по умолчанию 1.0)
 
-Вызовите метод  GET4ClickSDK.resetCurrentOrder() для сброса текущего Order
+
+Вызовите метод  Get4ClickSDK.resetCurrentOrder() для сброса текущего Order
+
+```kotlin
+Get4ClickSDK.resetCurrentOrder()
+ ```
 
 Полный код выглядит так :
 ```kotlin
+		//Инициализация SDK 
         Get4ClickSDK.initSdk(863)
 
-     
+
+     	//Для сброса текущего заказа и начала нового
+	    Get4ClickSDK.resetCurrentOrder()
+		
+		//Добавление полей к заказу
         Get4ClickSDK.getCurrentOrder().customerFirstName = "FirstName"
         Get4ClickSDK.getCurrentOrder().setCustomerLastName("LastName")
 									  .setCustomerGender(Order.Gender.male)
 
 
         val bannerView: BannerView = findViewById(R.id.bannerView)
+		
+		//Создание модели баннера с Id  для текущего заказа 
         val banner = Get4ClickSDK.getBannerWithCurrentOrder(2804)
-        bannerView.showBanner(banner, 0.8)
+		//Показ баннера
+        bannerView.showBanner(banner, 1.0)
+		
+	
  ```
 
 
