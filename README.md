@@ -17,7 +17,7 @@ repositories {
 
 ```groovy
 dependencies {
-     implementation 'com.github.getforclick:Android-SDK:1.0'
+     implementation 'com.github.getforclick:Android-SDK:1.1'
 }
 ```
 
