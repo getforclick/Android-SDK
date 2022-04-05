@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/getforclick/Android-SDK.svg)](https://jitpack.io/#getforclick/Android-SDK)
+
 # GET4Click SDK Android
 Это SDK для Get4Click , язык Kotlin (Android )  в будущем релизе возможен переход на Kotlin Multiplatform
 
@@ -17,7 +19,7 @@ repositories {
 
 ```groovy
 dependencies {
-     implementation 'com.github.getforclick:Android-SDK:1.1'
+     implementation 'com.github.getforclick:Android-SDK:1.1.1'
 }
 ```
 
