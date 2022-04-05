@@ -4,7 +4,8 @@ import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
 
-import ru.get4click.sdk.databinding.ActivityMainBinding
+
+import ru.get4click.sdk.sample.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
