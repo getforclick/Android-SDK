@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         Get4ClickSDK.initSdk(1095)
 
         Get4ClickSDK.getCurrentOrder().
-        setCustomerFirstName("IGOR")
+        setCustomerFirstName("TEST USER NAME")
 
         val banner = Get4ClickSDK.getBannerWithCurrentOrder(3132)
 

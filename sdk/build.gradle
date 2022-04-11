@@ -15,7 +15,7 @@ plugins {
 }
 
 group = 'ru.get4click'
-version = '1.1'
+version = '1.1.2'
 
 
  /*  publishing {
@@ -40,7 +40,7 @@ publishing {
           release(MavenPublication) {
               groupId = 'ru.get4click'
               artifactId = 'sdk'
-              version = '1.1'
+              version = '1.1.2'
 
               afterEvaluate {
                   from components.release
